@@ -1,0 +1,244 @@
+:root {
+    --primary-color: #5AA9E6 ;
+    --secondary-color: #595959 ;
+    --accent-color: #D4CEC2 ;
+    --higlight-color: #EBCBE2 ;
+    --text-color: #595959 ;
+    --bg-color: white ;
+    } 
+
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+
+html, body {
+    height: 100%;
+    }
+
+body {
+    font-family: "Inter", Garamond;
+    text-align: center;
+    color:#595959;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+          } 
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;   /* keskittää kortit vaakasuunnassa */
+    gap: 30px;
+    padding: 50px 20px;
+    }
+
+
+ header {
+width: 100%;
+background-image: url("taustakuva.png");
+background-repeat: no-repeat;
+background-position: center;
+background-size: cover;
+}
+          
+nav a {
+    font-family: "Inter";
+    text-align: center;
+    color: #5AA9E6;
+    font-variant:small-caps;
+    font-size: 30px;
+    width: 100%;
+    text-decoration: none;
+    margin: 1rem;
+    }
+
+    /*otsikot*/
+    h1 {
+    font-family: Garamond;
+    text-align: center;
+    color: #5AA9E6;
+    font-size:50px;
+          } 
+
+    h2 {
+    font-family: Garamond;
+    text-align: center;
+    color: #5AA9E6;
+    font-size:40px;
+ 
+          } 
+
+    h3 {
+    font-family: "Inter";
+    font-variant: small-caps;
+    font-weight:700;
+    font-size: 30px;
+    }
+
+.kortti {
+  background-color:#EBCBE2;
+  width: 100%;
+  max-width: 700px;
+  padding: 2rem;
+  border-radius: 12px;      /* pyöristetyt kulmat */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* varjo */
+  text-align: left;
+  font-size: 20px;
+  margin: 0 auto;
+}
+.kortti:hover {
+  transform: scale(1.05);
+}
+
+img{
+    border-radius: 12px;
+}
+
+/*Kuvien navigointi*/
+.image-nav {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    color:white;
+}
+
+.image-nav img {
+    width: 100%;
+    max-width: 200px;
+    border-radius: 12px;
+}
+
+.image-nav span {
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.5rem;
+    font-weight: bold;
+    color:white;
+    background: #D4CEC2;
+    padding: 0.2rem 0.5rem;
+    border-radius: 12px;
+    }
+
+.image-nav:hover {
+  transform: scale(1.05);
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* keskittää kuvat */
+  gap: 20px; /* väli kuvien välillä */
+  max-width: 1200px;
+  margin: 0 auto; /* keskittää koko gallerian */
+}
+
+.gallery img {
+  width: 200px; 
+  height: auto;
+  border-radius: 15px; /* pyöristetyt kulmat */
+  object-fit: cover;
+  transition: transform 0.2s;
+}
+
+footer {
+font-family: "Inter";
+text-align: center;
+color:#595959;
+background-color:#EBCBE2;
+padding: 1rem;
+width: 100%;
+} 
+    
+
+
+/* NAVIGAATIO */
+
+/* valikko */
+.menu{
+list-style:none;
+margin:0;
+padding:0;
+display:flex;
+flex-wrap: wrap;
+}
+
+/* listaelementit */
+.menu li{
+flex:1;
+}
+
+/* linkit */
+.menu a{
+display:block;
+padding:0.5rem;
+color:#5AA9E6;
+text-decoration:none;
+text-align:center;
+font-family: "Inter";
+font-size:40px;
+}
+
+.menu a:hover {
+  transform: scale(1.05);
+}
+
+/* hampurilaisikoni */
+.menu-icon{
+display:none;
+font-size:2rem;
+color:#5AA9E6;
+padding:0.5rem 1rem;
+cursor:pointer;
+position: absolute;
+top: 10px;
+left: 10px;
+}
+
+/* piilotetaan checkbox */
+#menu-toggle{
+display:none;
+}
+
+/*puhelin*/
+@media only screen and (max-width:500px)
+{
+    .menu{
+flex-direction:column;
+display:none;
+}
+
+.menu-icon{
+display:block;
+}
+
+/* kun hampurilaisikonia klikataan */
+#menu-toggle:checked + .menu-icon + .menu{
+display:flex;
+}
+
+.menu a{
+padding:1rem;
+margin: 0.5rem 0;
+font-size: 20px;
+}
+
+}
+/*normi näytöt*/
+
+@media only screen and (min-width: 421px){
+    
+
+}
+
+/*isot näytöt*/
+
+@media only screen and (min-width: 1020px)
+{
+
+
+}
